@@ -9,9 +9,9 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 class PubTest < MiniTest::Test
 
     def setup
-        @drink1 = Drink.new("CocaCola", 2)
-        @drink2 = Drink.new("Whiskey", 20)
-        @drink3 = Drink.new("Orange Juice", 6)
+        @drink1 = Drink.new("CocaCola", 2, 0)
+        @drink2 = Drink.new("Whiskey", 20, 3)
+        @drink3 = Drink.new("Orange Juice", 6, 0)
 
         @pub = Pub.new("The Code Pond", 500, [@drink1, @drink2, @drink3])
 
