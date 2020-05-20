@@ -24,7 +24,7 @@ class Pub
     end
 
     def order_drink(customer, drink)
-        if (@drinks.include?(drink))
+        if (@drinks.include?(drink) && customer.age >= 18)
             remove_drink(drink)
             increase_till_cash(drink)
             customer.decrease_wallet_cash(drink.price)
