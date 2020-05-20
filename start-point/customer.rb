@@ -7,6 +7,8 @@ class Customer
         @drinks = []
     end
 
-    
+    def decrease_wallet_cash(amount)
+        @wallet -= amount
+    end
 
 end
