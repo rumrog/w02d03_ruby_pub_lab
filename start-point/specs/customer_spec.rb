@@ -2,6 +2,7 @@ require('minitest/autorun')
 require('minitest/reporters')
 require_relative('../customer')
 require_relative('../drink')
+require_relative('../food')
 
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
@@ -9,6 +10,7 @@ class CustomerTest < MiniTest::Test
     
     def setup
         @drink = Drink.new("Whiskey", 20, 3)
+        @food = Food.new("Haggis", 10, 2)
         @customer = Customer.new("John", 20, 25, 0)
     end
 
@@ -27,6 +29,12 @@ class CustomerTest < MiniTest::Test
     def test_increase_customer_drunkenness()
         @customer.increase_customer_drunkenness(@drink)
         assert_equal(3, @customer.drunkenness)
+    end
+
+    def test_increase_customer_rejuvenation()
+        @customer.increase_customer_drunkenness(@drink)
+        @customer.increase_customer_rejuvenation(@food)
+        assert_equal(1, @customer.drunkenness)
     end
 
 end
