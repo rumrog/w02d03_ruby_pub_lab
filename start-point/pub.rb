@@ -22,4 +22,12 @@ class Pub
     def remove_drink(drink)
         @drinks.delete(drink)
     end
+
+    def order_drink(customer, drink)
+        if (@drinks.include?(drink))
+            remove_drink(drink)
+            increase_till_cash(drink)
+            customer.decrease_wallet_cash(drink.price)
+        end
+    end
 end

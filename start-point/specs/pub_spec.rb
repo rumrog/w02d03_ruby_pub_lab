@@ -37,4 +37,11 @@ class PubTest < MiniTest::Test
         assert_equal([@drink2, @drink3], @pub.drinks)
     end
 
+    def test_order_drink()
+        @pub.order_drink(@customer1, @drink1)
+        assert_equal(502, @pub.till_amount)
+        assert_equal(18, @customer1.wallet)
+        assert_equal([@drink2, @drink3], @pub.drinks)
+    end
+
 end
