@@ -21,4 +21,12 @@ class PubTest < MiniTest::Test
         assert_equal(500, @pub.till_amount())
     end
 
+    def test_check_pub_stock()
+        assert_equal(3, @pub.check_pub_stock())
+    end
+
+    # def test_take_out_drink()
+
+    # end
+
 end

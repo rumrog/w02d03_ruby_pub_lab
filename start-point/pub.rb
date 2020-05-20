@@ -10,4 +10,8 @@ class Pub
     def till_amount()
         return @till
     end
+
+    def check_pub_stock()
+        return @drinks.count()
+    end
 end
