@@ -19,7 +19,7 @@ class Pub
         @till += drink.price
     end
 
-    # def remove_drink(drink)
-    #     @drinks.delete(drink)
-    # end
+    def remove_drink(drink)
+        @drinks.delete(drink)
+    end
 end
