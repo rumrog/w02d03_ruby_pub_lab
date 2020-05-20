@@ -25,8 +25,18 @@ class PubTest < MiniTest::Test
         assert_equal(3, @pub.check_pub_stock())
     end
 
-    # def test_take_out_drink()
+    def test_increase_till_cash()
+        assert_equal(502, @pub.increase_till_cash(@drink1))
+    end
+
+    # def test_remove_drink()
+    #     @pub.remove_drink(@drink1)
+    #     assert_equal([@drink2, @drink3], @pub.drinks)
+    # end
+
+    # def test_take_out_drinks()
 
     # end
+
 
 end
